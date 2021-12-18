@@ -18,10 +18,18 @@ div.menu-item{
 	padding:8px}
 div.menu-item:hover{
 	background: rgba(128,128,128,.3);
-  border-radius: 6.4px;
-  color:#ffffff}
-div.menu-item:hover svg{
-	fill:currentColor}
+  border-radius: 6.4px;}
+div.menu-item:hover svg path{
+	fill:#ffffff}
+div.external-item{
+	background-color:rgb(255,70,85);
+	height:4px;
+	width:150px;
+	display:none;
+}
+div.menu-item:hover .external-item{
+	display:block;
+}
 div#header-buttons{
 	display:inline-flex; 
 	margin-left:auto;}
@@ -98,3 +106,4 @@ div#text-wrapper{
 	align-items:center;}
 h4#text-fonting{
 	font-family:Arial,sans-serif;}
+	
