@@ -29,6 +29,21 @@ div.external-item{
 }
 div.menu-item:hover .external-item{
 	display:block;
+	position:absolute;
+	z-index:2;
+  top:69px;
+  box-sizing:border-box;
+  background-color:#292929;
+  font-size:13px;
+  box-shadow:0px 4px 16px 0px;
+  border-radius:0 0 2px 2px;
+  text-align:left;
+  min-width:200px;
+  transition:cubic-bezier(0.06, 0.81, 0, 0.98) 0s,visibility 0s;
+  transition-property: opacity, visibility;
+  transition-duration: 0.5s, 0s;
+  transition-timing-function: cubic-bezier(0.06, 0.81, 0, 0.98), ease;
+  	
 }
 div#header-buttons{
 	display:inline-flex; 
