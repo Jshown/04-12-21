@@ -107,6 +107,28 @@ div.language-globe{
 i.fa-sort-down{
 	color:#F9F9F9
 }
+div#search-bar{
+	display:flex;
+	background-color:#2b2a29;
+	border:none;
+	font-size:13px;
+	margin:0px 15px 0px 18px;
+	color:#ffffff;
+	padding:9px 25px;
+	border-radius:none;
+	text-align:left;
+	font-family:Arial,sans-serif;
+	height:20px;
+	border-radius:15px
+}
+div#search-bar input[type=text]{
+	float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 13px;
+}
 a#sign-in-button{
 	background-color:rgb(209, 54, 57);; 
 	color:#000000; 
@@ -121,3 +143,4 @@ a#sign-in-button{
 	text-decoration:none;
 	font-family:Arial,sans-serif;
 }
+
