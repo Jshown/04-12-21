@@ -7,38 +7,40 @@
 <body>
 <script>
 
-let t = 10;
+let t = 7;
 
-let isMember = false;
+let isMember = true;
 
-if (t < 1){
-	console.log("ggerzhou");
-} else if (t >= 1 && t < 2){
-	console.log(t * 4);
-	
-} else if (t >= 2 && t < 5){
-	console.log(t * 3);
-	
-} else if (t >= 5 && t < 10){
-	console.log(t * 2.5);
-} else {
-	console.log(t * 2);
+if (isMember){
+	if (t < 1){
+		console.log(5);
+	} else if (t >= 1 && t < 2){
+		console.log(t * 3);
+		
+	} else if (t >= 2 && t < 5){
+		console.log(t * 2.5);
+		
+	} else if (t >= 5 && t < 10){
+		console.log(t * 2);
+	} else {
+		console.log(t * 1.5);
+	}
+} else{
+	if (t < 1){
+		console.log("ggerzhou");
+	} else if (t >= 1 && t < 2){
+		console.log(t * 4);
+		
+	} else if (t >= 2 && t < 5){
+		console.log(t * 3);
+		
+	} else if (t >= 5 && t < 10){
+		console.log(t * 2.5);
+	} else {
+		console.log(t * 2);
+	}
 }
 
-
-if (t < 1){
-	console.log(5);
-} else if (t >= 1 && t < 2){
-	console.log(t * 3);
-	
-} else if (t >= 2 && t < 5){
-	console.log(t * 2.5);
-	
-} else if (t >= 5 && t < 10){
-	console.log(t * 2);
-} else {
-	console.log(t * 1.5);
-}
 
 
 

@@ -1,0 +1,170 @@
+@charset "ISO-8859-1";
+body{
+	margin:0
+}
+div#header{
+	background-color:#111111;
+	width:100%; 
+	height:80px; 
+	display:flex; 
+	align-items:center;}
+div#header-logo{
+	cursor:pointer;
+}
+div.riotgames-menu{
+	height:24px;
+	width:75px;
+	fill:#f9f9f9;
+	color:#ffffff;
+	position:relative;
+	margin:23px;
+	display:inline-flex;
+}
+div#riotlogo{
+	height:24px;
+	width:35px;
+	fill:none;
+	margin:0;
+	display:inline-flex;
+	position:relative;
+	cursor:pointer;
+}
+div.riotgames-menu:hover svg path{
+	fill:#d13739}
+div#header-menus{
+	color:#ffffff; 
+	font-size:13px;
+	font-family: 'Montserrat', sans-serif;
+	display:inline-flex;
+	height:100%}
+div.menu-item{
+	margin-right:4px;
+	display:flex;
+	align-items:center;
+	position:relative;
+	cursor:pointer;
+	}
+div.hover-item{
+	padding:7.5px 16px;
+}
+div.menu-item:hover .hover-item{
+	background: rgba(128,128,128,.3);
+  border-radius: 6.4px;
+}
+div.menu-item:hover svg path{
+	fill:#ffffff}
+div.external-item{
+	height:4px;
+	width:200px;
+	display:none;
+}
+div.menu-item:hover .external-item{
+	display:block;
+	position:absolute;
+	z-index:2;
+  top:69px;
+  left:0;
+  height:auto;
+  box-sizing:border-box;
+  background-color:#292929;
+  font-size:13px;
+  border-top: 4px solid;
+  border-color:rgb(255,70,85);
+  border-radius: 2px;
+}
+div.list-items{
+	display:flex;
+	flex-direction:column;
+	margin:16px;
+	padding:10px;
+}
+div.list-items:hover{
+	background:rgba(128,128,128,0.3);
+	border-radius:6.4px;
+	padding:10px;
+}
+div.menu-item:hover .menu-item-underbar{
+	height:4px;
+	width:100%;
+	top:69px;
+	left:0px;
+	position:absolute;
+	z-index:2;
+	background-color:rgb(255,70,85);
+}
+div#header-buttons{
+	display:inline-flex; 
+	margin-left:auto;}
+div.language-globe{
+	width:30px; 
+	height:30px;
+	background-color:rgba(255,255,255,0.15);
+	border-radius:15px; 
+	text-align:center; 
+	line-height:30px}
+	i.fa-globe{
+	color:#ffffff;}
+i.fa-sort-down{
+	color:#F9F9F9
+}
+div#search-bar{
+	display:flex;
+	background-color:#2b2a29;
+	border:none;
+	font-size:13px;
+	margin:0px 15px 0px 18px;
+	color:#ffffff;
+	padding:9px 25px;
+	border-radius:none;
+	text-align:left;
+	font-family:Arial,sans-serif;
+	height:20px;
+	border-radius:15px;
+	
+}
+div#search-bar input[type=text]{
+	float: right;
+  padding: 6px;
+  width:109px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 13px;
+  background:none;
+  color:#ffffff;
+}
+button.submit-button{
+	background:none;
+	border:none;
+}
+span.icon svg{
+	width:19px;
+	height:20px;
+	line-height:20px;
+	fill:#ffffff
+}
+span.icon svg:hover{
+	cursor:pointer;
+}
+a#sign-in-button{
+	background-color:rgb(209, 54, 57);; 
+	color:#000000; 
+	display:flex;
+	height:20px; 
+	line-height:20px;
+	font-size:13px;
+	border:none;
+	margin:0px 15px 0px 15px;
+	padding:9px 25px;
+	border-radius:15px;
+	text-align:center;
+	text-decoration:none;
+	font-family:Arial,sans-serif;
+}
+div.topic-context{
+	width:100%;
+	color:#ffffff;
+	height:100px;
+	position:absolute;
+	background-image: url(../images/malphite.jpg);
+}
