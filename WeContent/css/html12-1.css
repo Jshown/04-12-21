@@ -94,12 +94,13 @@ div.menu-item:hover .menu-item-underbar{
 }
 div#header-buttons{
 	display:inline-flex; 
-	margin-left:auto;}
+	margin-left:auto;
+	align-items:center;}
 div.language-globe{
 	width:30px; 
 	height:30px;
 	background-color:rgba(255,255,255,0.15);
-	border-radius:15px; 
+	border-radius:15px;
 	text-align:center; 
 	line-height:30px}
 	i.fa-globe{
@@ -162,9 +163,22 @@ a#sign-in-button{
 	font-family:Arial,sans-serif;
 }
 div.topic-context{
-	width:100%;
+	width:1349px;
 	color:#ffffff;
-	height:100px;
+	text-align:center;
+	padding:10px;
 	position:absolute;
 	background-image: url(../images/malphite.jpg);
+}
+div.topic-context ::selection{
+	background-color:#d1363a;
+}
+div.context{
+	height:400px;
+	display:flex;
+	text-align:center;
+}
+div#main-text ::selection{
+	background-color:#d1363a;
+	color:#e7e6e3;
 }
