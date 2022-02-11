@@ -188,10 +188,22 @@ div.topic-context{
 div.topic-context ::selection{
 	background-color:#d1363a;
 }
+
 div.context{
-	height:400px;
-	display:flex;
-	text-align:center;
+	height:100px;
+	width:770px;
+	display:block;
+	background-color:#e7e6e3;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:lighter;
+	font-size: 1.2rem;
+	line-height:1.636;
+	font-family:'Inter', sans-serif;
+	
+}
+div#main-text{
+	background-color:#e7e6e3;
 }
 div#main-text ::selection{
 	background-color:#d1363a;

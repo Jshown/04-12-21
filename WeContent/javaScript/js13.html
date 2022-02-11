@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+let date = new Date();
+
+// if("year"){
+// console.log( date.getFullYear() );
+// } else if("day"){
+// console.log( date.getDate() );
+// } else if("month")
+// console.log( date.getDay() );
+
+let day;
+if (date.getDay() == 0){
+	day = "Sun";
+} else if (date.getDay() == 1){
+	day = "Mon";
+}else if (date.getDay() == 2){
+	day = "Tues";
+}else if (date.getDay() == 3){
+	day = "Weds";
+}else if (date.getDay() == 4){
+	day = "Thurs";
+}else if (date.getDay() == 5){
+	day = "Fri";
+}else if (date.getDay() == 6){
+	day = "Sat";
+}
+
+console.log("Today's date is " + date.getFullYear() + " " + (date.getMonth() + 1) + " "  + date.getDate() + " " + day );
+
+
+</script>
+</body>
+</html>
