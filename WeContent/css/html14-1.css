@@ -213,6 +213,7 @@ div#main-text .context p:first-child{
 
 a.additional-links{
 	font-weight:bold;
+	color: #2b2a29;
 	background-position:0 95%;
 	background-image: url(https://www.riotgames.com/assets/img/structure/149a1d9c51c7bf69816f75699be94a7e/distressed-underline.svg);
 	background-size: 680px 2px,0 0;
@@ -221,9 +222,15 @@ a.additional-links{
 
 a.additional-links:hover{
 	font-weight:bold;
+	color: #2b2a29;
 	cursor:pointer;
 	background-position:0 95%;
 	background-image: url(https://www.riotgames.com/assets/img/structure/7d7cf62b9e1571d8046c681d85759354/distressed-underline--primary.svg);
 	background-size: 680px 2px,0 0;
 	background-repeat: no-repeat;
+}
+h4.contents-table{
+	font-family:'Inter', sans-serif;
+	font-weight:bold;
+	font-size:1.375rem;
 }
