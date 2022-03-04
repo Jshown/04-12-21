@@ -11,14 +11,75 @@
 // }
 
 
-for(let i=1; i<=9; i++)
-	for(let a=2; a<=9; a++)
-	console.log(a + "*" + i + "=" + a*i)
+// for(let i=2; i<=9; i++){
+// 	console.log( "------------ " + i + " x --------------" )
+// 	for(let a=1; a<=9; a++){
+// 		console.log(i + "*" + a + "=" + i*a)
+// 	}
+// }
 
+// for(let r=0; r<5; r++){
+// 	let star = " ";
+// 	for(let i=0; i<5; i++) {
+// 		star += "*";
+// 	}
+// 	console.log(star);
+// }
 
-
-
+// 	let st = " ";
+// 	for(let i=0; i<5; i++){
+// 		st += "*";
+// 		console.log(st);
+// 	}
 	
+// 	let str ="";
+// 	for(let i=5; i>0; i--){
+// 		str -= "****"
+// 		console.log(str);
+// 	}
+	
+// for(let j=0; j<5; j++){
+// 	let star = "";
+// 	for(let i=0; i<5-j; i++){
+// 		star +="*";
+// 	}
+// 	console.log(star)
+// }
+
+let result = "";
+for(let line=0; line<5; line++){
+	let space = "";
+	for(let i=0; i<4-line; i++){
+	space += " ";
+	}
+	let star = ""
+	for(let j=1; j<line+2; j++){
+		star +="*";
+	}
+	result = space + star;
+	console.log(result);
+}
+
+
+// let result = "";
+// for(let line=5; line>5; line--){
+// 	let space = "";
+// 	for(let i=5; i>4+line; i--){
+// 	space -= " ";
+// 	}
+// 	let star = ""
+// 	for(let j=9; j>line-2; j--){
+// 		star -="*";
+// 	}
+// 	result = space + star;
+// 	console.log(result);
+// }
+
+
+
+
+
+
 </script>
 </body>
 </html>
