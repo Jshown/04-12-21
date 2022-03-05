@@ -207,6 +207,9 @@ div.context{
 	line-height:1.636;
 	font-family:'Inter', sans-serif;
 }
+h4.contents-table{
+	font-size:21px;
+}
 div#main-text .context p:first-child{
 	margin:0;
 }
@@ -217,8 +220,12 @@ div#main-text .context p:first-child{
 	background-image: url(https://www.riotgames.com/assets/img/structure/149a1d9c51c7bf69816f75699be94a7e/distressed-underline.svg);
 	background-size: 680px 2px,0 0;
 	background-repeat: no-repeat;
+	width:fit-content;
+	color:black;
 }
-
+a.visited{
+	color:#000000;
+}
 .additional-links:hover{
 	font-weight:bold;
 	cursor:pointer;
@@ -227,4 +234,15 @@ div#main-text .context p:first-child{
 	background-size: 680px 2px,0 0;
 	background-repeat: no-repeat;
 }
-li
+.headings{
+	font-family: 'Work Sans', sans-serif;
+	font-size:28px;
+}
+.subheading{
+	font-family: 'Work Sans', sans-serif;
+	font-size:30x;
+}
+a{
+	text-decoration:none;
+	
+}
