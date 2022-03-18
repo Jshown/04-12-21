@@ -254,10 +254,10 @@ hr.sector{
 	width:100%;
 	margin-right:auto;
 	margin-left:auto;
-	margin-top: 100px;
-	margin-bottom:100px;
+	padding-top: 40px;
+	padding-bottom:40px;
 	background-image: url(https://www.riotgames.com/assets/img/structure/ec52d55f0f379518c25d286fb69f4ea6/distressed-stroke.svg);
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	background-position:50% 50%;
 	background-size: 420px 2px;
 	opacity:.3;
