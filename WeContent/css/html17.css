@@ -1,0 +1,31 @@
+@charset "UTF-8";
+div#background{
+	background-color:#1AA7EC;
+	width:500px;
+	height:800px;
+	align-items:center;
+}
+div#screen{
+	background-color:#ADD8E6;
+	width:500px;
+	height:100px;
+	margin:10px;
+}
+div.buttons{
+	height:100px;
+	width:100px;
+	margin:10px;
+	display:inline-flex;
+}
+.number{
+	background-color:#E2E5DE;
+	justify-content:center;
+}
+.other{
+	background-color:E4F78F;
+	justify-content:center;
+}
+.remove{
+	background-color:#ff595e;
+	justify-content:center;
+}

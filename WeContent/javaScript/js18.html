@@ -10,23 +10,13 @@
 
 <script>
 
-// let colorCode = 110000;
-// function myFunction() {
-// // 	document.getElementById("btn1").style.backgroundColor = "black";
- 
-//  document.getElementById("btn1").style.color = "green";
 
-// }
 let colorArr = ["red", "orange", "yellow", "green", "blue", "darkblue", "purple"];
 let cnt = 0;
-for (cnt=1; cnt<101; cnt++){
-	if (f%7 == 0){
-		function myFunction() {
-			document.getElementById("btn1").style.backgroundColor = colorArr[cnt]; cnt++;
-			}
-		}
-
-
+function myFunction() {
+	document.getElementById("btn1").style.backgroundColor = colorArr[cnt %7]; 
+	cnt++;
+}
 
 
 
