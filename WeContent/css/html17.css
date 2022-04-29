@@ -1,28 +1,63 @@
 @charset "UTF-8";
 div#background{
 	background-color:#1AA7EC;
-	width:500px;
-	height:800px;
+	display:flex;
+	width:455px;
+	height:550px;
+	justify-content:center;
 	align-items:center;
+	flex-direction:column;
+	border-radius:5px;
+	font-size:20px;
+}
+div#wrapper{
+	width:95%;
+	height:97%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
 }
 div#screen{
 	background-color:#ADD8E6;
-	width:500px;
-	height:100px;
-	margin:10px;
+  display: flex;
+	width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius:5px;
+}
+div#first{
+	display:flex;
+	justify-content:space-between;
+}
+div#second{
+	display:flex;
+	justify-content:space-between;
+}
+div#third{
+	display:flex;
+	justify-content:space-between;
+}
+div#last{
+	display:flex;
+	justify-content:space-between;
 }
 div.buttons{
 	height:100px;
 	width:100px;
-	margin:10px;
 	display:inline-flex;
+	align-items:center;
+	border-radius:10px;
 }
 .number{
 	background-color:#E2E5DE;
 	justify-content:center;
 }
+.solution{
+	background-color:#E2E5DE;
+	justify-content:center;
+}
 .other{
-	background-color:E4F78F;
+	background-color:#E4F78F;
 	justify-content:center;
 }
 .remove{
