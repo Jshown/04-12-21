@@ -18,42 +18,27 @@ numbers.forEach(function(param1, param2, param3){
 
 const number = document.querySelectorAll(".number");
 
-numbers.forEach(function(item){
-	
-});
-document.querySelector(".number").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += this.innerHTML;
-});
-console.log(document.getElementById("no2"));
-console.log(document.querySelector("#no2"));
-document.querySelector("#no2").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += 2;
-});
-console.log(document.getElementById("no3"));
-console.log(document.querySelector("#no3"));
-document.querySelector("#no3").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += 3;
-});
-console.log(document.getElementById("no4"));
-console.log(document.querySelector("#no4"));
-document.querySelector("#no4").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += 4;
-});
-console.log(document.getElementById("no5"));
-console.log(document.querySelector("#no5"));
-document.querySelector("#no5").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += 5;
-});
-console.log(document.getElementById("no6"));
-console.log(document.querySelector("#no6"));
-document.querySelector("#no6").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML += 6;
+number.forEach(function(item){
+
+	item.addEventListener("click",function(){
+		document.querySelector("#screen").innerHTML += item.innerHTML;
+	});
 });
 
-console.log(document.getElementById("end"));
-console.log(document.querySelector("#end"));
+const other = document.querySelectorAll(".other");
+
+other.forEach(function(item){
+	item.addEventListener("click", function(){
+		document.querySelector("#screen").innerHTML += item.innerHTML;
+	});
+});
+
 document.querySelector("#end").addEventListener("click",function(){
-	document.querySelector("#screen").innerHTML ="";
+	document.querySelector("#screen").innerHTML = "";
+});
+
+document.querySelector("#sol").addEventListener("click",function(){
+	document.querySelector("#screen").innerHTML = ""
 });
 
 
