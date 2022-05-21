@@ -32,13 +32,22 @@ document.querySelector("#end").addEventListener("click",function(){
 
 // 4. Solution
 document.querySelector("#sol").addEventListener("click",function(){
-	document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
-	document.querySelector("#screen").innerHTML += "=";
+
+	let screenHTML = document.querySelector("#screen").innerHTML;
+	let frog = screenHTML.substr(screenHTML.length-1, 1);
 	
-	let frog = document.querySelector("#screen").innerHTML.substr(-1);
 	if (isNaN(Number (frog))){
-		document.querySelector("#screen").innerHTML = "=" + document.querySelector("#sreen").innerHTML;
+		document.querySelector("#screen").innerHTML += screenHTML.substring(0, screenHTML.length-1);
+		document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
+		document.querySelector("#screen").innerHTML += "=";
 	}else {
+		document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
+		document.querySelector("#screen").innerHTML += "=";
 		document.querySelector("#screen").innerHTML += item.innerHTML;
 	}
 });
+
+
+
+
+
