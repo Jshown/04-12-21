@@ -12,12 +12,14 @@ number.forEach(function(item){
 const other = document.querySelectorAll(".other");
 other.forEach(function(item){
 	item.addEventListener("click", function(){
-		let Last = document.querySelector("#screen").innerHTML.charAt( document.querySelector("#screen").innerHTML += item.innerHTML);
-		let Last = document.querySelector("#screen").innerHTML.substr(-1);
+		let last = document.querySelector("#screen").innerHTML.charAt(document.querySelector("#screen").innerHTML.length-1 );
+		let screenHTML = document.querySelector("#screen").innerHTML;
+//		let last = document.querySelector("#screen").innerHTML.substr(-1);
 		
-		if ( isNaN (Last) ){
-			document.querySelector ("#screen").innerHTML = document.querySelector("#screen").innerHTML.replace(Last   )
-		} else {
+		if ( isNaN ( Number (last) ) ){
+//			document.querySelector ("#screen").innerHTML = document.querySelector("#screen").innerHTML.replace(last, item.innerHTML)4
+				document.querySelector("#screen").innerHTML = screenHTML.substr(0, screenHTML.length-1 ) + item.innerHTML;
+						} else {
 			document.querySelector("#screen").innerHTML += item.innerHTML;
 		}
 	});
@@ -32,6 +34,11 @@ document.querySelector("#end").addEventListener("click",function(){
 document.querySelector("#sol").addEventListener("click",function(){
 	document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 	document.querySelector("#screen").innerHTML += "=";
+	
+	let frog = document.querySelector("#screen").innerHTML.substr(-1);
+	if (isNaN(Number (frog))){
+		document.querySelector("#screen").innerHTML = "=" + document.querySelector("#sreen").innerHTML;
+	}else {
+		document.querySelector("#screen").innerHTML += item.innerHTML;
+	}
 });
-
-
