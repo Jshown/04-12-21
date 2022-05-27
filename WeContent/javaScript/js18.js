@@ -1,5 +1,8 @@
 "use strict"
 
+// 0. Start-up
+document.querySelector("#answer").innerHTML = "0";
+
 // 1. Numbers
 const number = document.querySelectorAll(".number");
 number.forEach(function(item){
@@ -28,6 +31,7 @@ other.forEach(function(item){
 // 3. Clear
 document.querySelector("#end").addEventListener("click",function(){
 	document.querySelector("#screen").innerHTML = "";
+	document.querySelector("#answer").innerHTML = "";
 });
 
 // 4. Solution
@@ -40,10 +44,13 @@ document.querySelector("#sol").addEventListener("click",function(){
 		document.querySelector("#screen").innerHTML += screenHTML.substring(0, screenHTML.length-1);
 		document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 		document.querySelector("#screen").innerHTML += "=";
+	}else if (isNaN(Number (screenHTML))){
+		document.querySelector("#screen").innerHTML == "=";
+		document.querySelector("#answer").innerHTML = "0";
 	}else {
 		document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 		document.querySelector("#screen").innerHTML += "=";
-		document.querySelector("#screen").innerHTML += item.innerHTML;
+	
 	}
 });
 
