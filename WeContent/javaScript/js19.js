@@ -1,21 +1,17 @@
 "use strict"
-let leftNumber   = "";
-let operator        = "";
-let rightNumber = "";
+let isLeftNumber   = false;
+let isOperator        = false;
+let isRightNumber = false;
 
 // 1. Numbers
 const number = document.querySelectorAll(".number");
 number.forEach(function(item){
 	item.addEventListener("click",function(){
-		if ( operator != null && operator != ""){
-		  rightNumber += item.innerHTML;
-		}else {
-		  leftNumber     += item.innerHTML;
-		}
+		isLeftNumber = true; 
 		
-//		if(leftNumber != null && operator != null && operator != "" && rightNumber != null) {
-//			
-//		}
+		if ( isOperator){
+		  isRightNumber = true;
+		}
 		document.querySelector("#screen").innerHTML += item.innerHTML;
 	});
 });
@@ -24,7 +20,9 @@ number.forEach(function(item){
 const other = document.querySelectorAll(".other");
 other.forEach(function(item){
 	item.addEventListener("click", function(){
-		operator =  item.innerHTML;
+		 isLeftNumber   = true;
+		 isOperator        = true;
+	   isRightNumber = false;
 		let last = document.querySelector("#screen").innerHTML.charAt(document.querySelector("#screen").innerHTML.length-1 );
 		let screenHTML = document.querySelector("#screen").innerHTML;
 //		let last = document.querySelector("#screen").innerHTML.substr(-1);
@@ -40,31 +38,30 @@ other.forEach(function(item){
 
 // 3. Clear
 document.querySelector("#end").addEventListener("click",function(){
-	operator       = "";
-	rightNumber= "";
-	leftNumber  = "";
+	isOperator        =false;
+	isRightNumber= false;
+	isLeftNumber  = false;
 	document.querySelector("#screen").innerHTML = "";
 	document.querySelector("#answer").innerHTML = "";
 });
 
 // 4. Solution
 document.querySelector("#sol").addEventListener("click",function(){
+		solution ();
+});
 
-	let screenHTML = document.querySelector("#screen").innerHTML;
-	let frog = screenHTML.substr(screenHTML.length-1, 1);
-	
-	if (screenHTML == ""){
-		document.querySelector("#screen").innerHTML = "0 =";
-		document.querySelector("#answer").innerHTML = "0";
-	}else{
+function solution( ) {
+		
+		let screenHTML = document.querySelector("#screen").innerHTML;
+		let frog = screenHTML.substr(screenHTML.length-1, 1);
+		
+	if(isLeftNumber && isOperator && isRightNumber) {
+		document.querySelector("#screen").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 		if (isNaN(Number (frog))){
 			document.querySelector("#screen").innerHTML += screenHTML.substring(0, screenHTML.length-1);
 			document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
-			document.querySelector("#screen").innerHTML += "=";	
-		} else{
+		}else {
 			document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
-			document.querySelector("#screen").innerHTML += "=";	
 		}
 	}
-});
-
+}

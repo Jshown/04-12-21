@@ -1,0 +1,79 @@
+@charset "UTF-8";
+div#background{
+	background-color:#1AA7EC;
+	display:flex;
+	width:455px;
+	height:550px;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	border-radius:5px;
+	font-size:20px;
+}
+div#wrapper{
+	width:95%;
+	height:97%;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+}
+div#screen{
+	background-color:#ADD8E6;
+  display: flex;
+	width: 100%;
+  height: 50px;
+  margin-bottom: 0px;
+  border-radius:5px 5px 0px 0px;
+  overflow:hidden;
+  overflow-wrap:anywhere;
+}
+div#answer{
+	background-color:#ADD8E6;
+	color: #808080;
+  display: flex;
+	width: 100%;
+  height: 50px;
+  justify-content:end;
+  align-items:end;
+  margin-bottom: 10px;
+  border-radius:0px 0px 5px 5px;	
+}
+div#first{
+	display:flex;
+	justify-content:space-between;
+}
+div#second{
+	display:flex;
+	justify-content:space-between;
+}
+div#third{
+	display:flex;
+	justify-content:space-between;
+}
+div#last{
+	display:flex;
+	justify-content:space-between;
+}
+div.buttons{
+	height:100px;
+	width:100px;
+	display:inline-flex;
+	align-items:center;
+	border-radius:10px;
+}
+.number{
+	background-color:#E2E5DE;
+	justify-content:center;
+}
+.solution{
+	background-color:#E2E5DE;
+	justify-content:center;
+}
+.other{
+	background-color:#E4F78F;
+	justify-content:center;
+}
+.remove{
+	background-color:#ff595e;
+	justify-content:center;
+}
