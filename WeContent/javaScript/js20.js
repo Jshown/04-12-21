@@ -52,7 +52,9 @@ document.querySelector("#end").addEventListener("click",function(){
 	document.querySelector("#screen").innerHTML = "";
 	document.querySelector("#answer").innerHTML = "";
 });
-
+document.querySelector("#backspace").addEventListener("click",function(){
+	document.querySelector("#screen").innerHTML = document.querySelector("#screen").innerHTML.substr(0, document.querySelector("#screen").innerHTML.length-1 );
+});
 // 4. Solution
 document.querySelector("#sol").addEventListener("click",function(){
 		solution ();
