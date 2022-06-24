@@ -30,7 +30,7 @@ div#wrapper{
 }
 div#screen{
 	background-color:#00E5EE;
-	color: #F2F3F5;
+	color: #FFFFFF;
   display: flex;
 	width: 100%;
   height: 100px;
@@ -55,6 +55,14 @@ div#external{
 	width: 100%;
 	height:50px;
 	justify-content:space-between;	
+}
+#history::before{
+	font-family:"FontAwesome";
+	content:"\f017";
+}
+#history::after{
+	font-family:"FontAwesome";
+	content:"\f1ec";
 }
 i.fa-clock{
 	color:#CDEDFA;

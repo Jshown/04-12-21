@@ -54,6 +54,12 @@ document.querySelector("#end").addEventListener("click",function(){
 });
 document.querySelector("#backspace").addEventListener("click",function(){
 	document.querySelector("#screen").innerHTML = document.querySelector("#screen").innerHTML.substr(0, document.querySelector("#screen").innerHTML.length-1 );
+  if(isLeftNumber && isOperator){
+		isRightNumbr = false;
+	}else if(LeftNumber){
+		isOperator = false;
+	}
+	
 });
 // 4. Solution
 document.querySelector("#sol").addEventListener("click",function(){
