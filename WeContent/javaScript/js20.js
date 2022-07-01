@@ -4,6 +4,11 @@ let isOperator        = false;
 let isRightNumber = false;
 let isSolution          = false;
 
+
+//0.External
+document.querySelector("#history").addEventListener("click", function(){
+	document.querySelector("#history").classList.toggle("onClick");
+});
 // 1. Numbers
 const number = document.querySelectorAll(".number");
 number.forEach(function(item){
@@ -21,6 +26,13 @@ number.forEach(function(item){
 	  if (isLeftNumber && isOperator && isRightNumber){
 			document.querySelector("#answer").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 		}
+//		if(isLeftNumber&isOperator)){
+//			
+//		}	else(isLeftNumber&&isOperator&&isRightNumber){
+//			isLeftNumber = true;
+//			isOperator = false;
+//			isRightNumber = false;
+//		}
 	});
 });
 
@@ -28,19 +40,19 @@ number.forEach(function(item){
 const other = document.querySelectorAll(".other");
 other.forEach(function(item){
 	item.addEventListener("click", function(){
-		 isLeftNumber   = true;
-		 isOperator        = true;
-	   isRightNumber = false;
-		let last = document.querySelector("#screen").innerHTML.charAt(document.querySelector("#screen").innerHTML.length-1 );
 		let screenHTML = document.querySelector("#screen").innerHTML;
 //		let last = document.querySelector("#screen").innerHTML.substr(-1);
 		
-		if ( isNaN ( Number (last) ) ){
-//			document.querySelector ("#screen").innerHTML = document.querySelector("#screen").innerHTML.replace(last, item.innerHTML)4
-				document.querySelector("#screen").innerHTML = screenHTML.substr(0, screenHTML.length-1 ) + item.innerHTML;
-						} else {
-			document.querySelector("#screen").innerHTML += item.innerHTML;
+		if(isLeftNumber){
+			if(isOperator){
+				document.querySelector("#screen").innerHTML=screenHTML.substr(0,screenHTML.length-1) + item.innerHTML;
+			}else {
+				document.querySelector("#screen").innerHTML += item.innerHTML;
+			}
 		}
+		isLeftNumber   = true;
+		isOperator        = true;
+		isRightNumber = false;
 	});
 });
 
@@ -55,8 +67,8 @@ document.querySelector("#end").addEventListener("click",function(){
 document.querySelector("#backspace").addEventListener("click",function(){
 	document.querySelector("#screen").innerHTML = document.querySelector("#screen").innerHTML.substr(0, document.querySelector("#screen").innerHTML.length-1 );
   if(isLeftNumber && isOperator){
-		isRightNumbr = false;
-	}else if(LeftNumber){
+		isRightNumber = false;
+	}else if(isLeftNumber){
 		isOperator = false;
 	}
 	
@@ -74,9 +86,3 @@ function solution( ) {
 		isSolution = true;
 	}
 }
-
-
-
-
-
-

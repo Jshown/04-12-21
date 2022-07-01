@@ -60,7 +60,8 @@ div#external{
 	font-family:"FontAwesome";
 	content:"\f017";
 }
-#history::after{
+
+#history.onClick::before{
 	font-family:"FontAwesome";
 	content:"\f1ec";
 }
@@ -79,6 +80,13 @@ i.fa-delete-left{
 i.fa-delete-left:hover{
 	cursor:pointer;
 	color:#A3CEEF;
+}
+div#history-tab{
+	display:block;
+	width:275px;
+	height:270px;
+	position:absolute;
+	margin-top:245px;
 }
 hr.sector{
 	height:2px;
