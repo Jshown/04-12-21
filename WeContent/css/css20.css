@@ -24,6 +24,7 @@ div#wrapper{
 	width:95%;
 	height:90%;
 	display:flex;
+	position:relative;
 	font-size:25px;
 	flex-direction:column;
 	justify-content:space-around;
@@ -56,12 +57,11 @@ div#external{
 	height:50px;
 	justify-content:space-between;	
 }
-#history::before{
+#wrapper #history::before{
 	font-family:"FontAwesome";
 	content:"\f017";
 }
-
-#history.onClick::before{
+#wrapper.onClick #history::before{
 	font-family:"FontAwesome";
 	content:"\f1ec";
 }
@@ -83,10 +83,31 @@ i.fa-delete-left:hover{
 }
 div#history-tab{
 	display:block;
+  background-color:#00E5EE;
+	left:-300px;
+	bottom:0px;
 	width:275px;
-	height:270px;
+	height:275px;
 	position:absolute;
-	margin-top:245px;
+	overflow-y:scroll;
+	scrollbar-color:blue yellow;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #316271; 
+}
+
+#wrapper.onClick #history-tab{
+	left:0;
 }
 hr.sector{
 	height:2px;

@@ -7,7 +7,7 @@ let isSolution          = false;
 
 //0.External
 document.querySelector("#history").addEventListener("click", function(){
-	document.querySelector("#history").classList.toggle("onClick");
+	document.querySelector("#wrapper").classList.toggle("onClick");
 });
 // 1. Numbers
 const number = document.querySelectorAll(".number");
@@ -37,24 +37,30 @@ number.forEach(function(item){
 });
 
 // 2. Operations
-const other = document.querySelectorAll(".other");
-other.forEach(function(item){
+const other = document.querySelectorAll(".item");
+other.forEach(function(other){
 	item.addEventListener("click", function(){
 		let screenHTML = document.querySelector("#screen").innerHTML;
-//		let last = document.querySelector("#screen").innerHTML.substr(-1);
-		
-		if(isLeftNumber){
-			if(isOperator){
-				document.querySelector("#screen").innerHTML=screenHTML.substr(0,screenHTML.length-1) + item.innerHTML;
-			}else {
+		let last = document.querySelector("#screen").innerHTML.charAt(document.querySelector("#screen").innerHTML.length-1 );
+
+		if(screenHTML != null && screenHTML != ""){
+			isLeftNumber = false;
+			isOperator = false;
+			isRightNumber = false;
+		}else 	if ( isNaN ( Number (last) ) ){
+	//			document.querySelector ("#screen").innerHTML = document.querySelector("#screen").innerHTML.replace(last, item.innerHTML)4
+					document.querySelector("#screen").innerHTML = screenHTML.substr(0, screenHTML.length-1 ) + item.innerHTML;
+							} else {
 				document.querySelector("#screen").innerHTML += item.innerHTML;
 			}
-		}
+			
 		isLeftNumber   = true;
 		isOperator        = true;
 		isRightNumber = false;
-	});
+		
+		});
 });
+
 
 // 3. Clear
 document.querySelector("#end").addEventListener("click",function(){
