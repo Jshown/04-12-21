@@ -21,8 +21,8 @@ div#background{
 	font-size:20px;
 }
 div#wrapper{
-	width:95%;
-	height:90%;
+	width:325px;
+	height:550px;
 	display:flex;
 	position:relative;
 	font-size:25px;
@@ -86,23 +86,24 @@ div#history-tab{
   background-color:#00E5EE;
 	left:-300px;
 	bottom:0px;
-	width:275px;
+	width:255px;
 	height:275px;
 	position:absolute;
 	overflow-y:scroll;
-	scrollbar-color:blue yellow;
+  margin: 10px 0px;
+	border-right: 3px white;
 }
-::-webkit-scrollbar {
+#history-tab::-webkit-scrollbar {
   width: 5px;
 }
-::-webkit-scrollbar-track {
+#hisotry-tab::-webkit-scrollbar-track {
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb {
+#history-tab::-webkit-scrollbar-thumb {
   background: #FFFFFF; 
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
+#history-tab::-webkit-scrollbar-thumb:hover {
   background: #316271; 
 }
 
@@ -138,8 +139,8 @@ div#last{
 	justify-content:space-between;
 }
 div.buttons{
-	height:70px;
-	width:70px;
+	height:60px;
+	width:60px;
 	display:inline-flex;
 	color:#003E3F;
 	align-items:center;
