@@ -6,9 +6,14 @@ let isSolution          = false;
 
 
 //0.External
-document.querySelector("#history").addEventListener("click", function(){
-	document.querySelector("#wrapper").classList.toggle("onClick");
+let his = document.querySelector("#history")
+
+	document.querySelector("#history").addEventListener("click", function(){
+		if (his !== null && his !==''){
+			document.querySelector("#wrapper").classList.toggle("onClick");
+		}
 });
+
 // 1. Numbers
 const number = document.querySelectorAll(".number");
 number.forEach(function(item){
@@ -80,12 +85,19 @@ document.querySelector("#sol").addEventListener("click",function(){
 });
 
 function solution( ) {
+let equation = document.querySelector("#screen").innerHTML;
+let answer = document.querySelector("#answer").innerHTML;
 
-	if(isLeftNumber && isOperator && isRightNumber) {
+	if(isLeftNumber && isOperator && isRightNumber) { // 이거 operations때 처럼 안되는거 아닌가요? ㅜㅜ
 		document.querySelector("#screen").innerHTML = eval(document.querySelector("#screen").innerHTML.replaceAll("×", "*").replaceAll("÷", "/"));
 		document.querySelector("#answer").innerHTML = "";
 		
 		isSolution = true;
-	
+		document.querySelector("#history-tab").innerHTML += "<div class='history-item-wrapper'>"
+																																																				+"<p class='h-equation'>" + equation + "</p>"
+																																																				+"<p class='h-answer'> " + answer + "</p>"
+																																																				+"</div>"
 	}
 }
+
+

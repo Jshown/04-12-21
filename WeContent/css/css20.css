@@ -21,8 +21,8 @@ div#background{
 	font-size:20px;
 }
 div#wrapper{
-	width:325px;
-	height:550px;
+	width:365px;
+	height:590px;
 	display:flex;
 	position:relative;
 	font-size:25px;
@@ -86,17 +86,20 @@ div#history-tab{
   background-color:#00E5EE;
 	left:-300px;
 	bottom:0px;
-	width:255px;
-	height:275px;
+	width:285px;
+	height:310px;
 	position:absolute;
 	overflow-y:scroll;
-  margin: 10px 0px;
-	border-right: 3px white;
+  margin: 5px 0px;
+  color:white;
+  font-size:23px;
+	border-right: 3px solid white;
 }
 #history-tab::-webkit-scrollbar {
   width: 5px;
 }
 #hisotry-tab::-webkit-scrollbar-track {
+	size:10px;
   border-radius: 10px;
 }
 #history-tab::-webkit-scrollbar-thumb {
@@ -139,8 +142,8 @@ div#last{
 	justify-content:space-between;
 }
 div.buttons{
-	height:60px;
-	width:60px;
+	height:78px;
+	width: 78px;
 	display:inline-flex;
 	color:#003E3F;
 	align-items:center;
